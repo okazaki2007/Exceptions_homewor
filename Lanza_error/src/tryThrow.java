@@ -71,7 +71,7 @@ public class tryThrow {
         try{
         t.lis();}
         catch (Exception e){
-            System.err.println(e.getMessage());//Obtiene la excepcion creada proviniente del metodo lis()
+            System.err.println(e.getMessage());//Obtiene la excepcion creada proviniente del metodo lis() que es igual a: "No es divisible el numero 9 entre el numero 0"
             Thread.sleep(15);
         }finally {
             System.out.println("Cerrando recursos.....");
@@ -85,7 +85,8 @@ public class tryThrow {
             Thread.sleep(15);
             t.dividir2();
         }catch (Exception e){
-            System.err.println(e.getMessage());///Obtiene mensaje de error proviniente del metodo dividir2()
+            System.err.println(e.getMessage());///Obtiene mensaje de error proviniente del metodo dividir2() que es igual a:  "Error al ejecutar la division"
+            //luego se ejecuta el "finally situado en dividir2() "
         }
 
 
@@ -98,7 +99,7 @@ public class tryThrow {
             Thread.sleep(15);
         t.test();}
         catch (Exception e){
-            System.err.println(e.getMessage());//Obtiene mensaje de error proviniente del metodo test()
+            System.err.println(e.getMessage());//Obtiene mensaje de error proviniente del metodo test() pero no se ejecuta ya que no hay error de ejecucion
         }
         finally {
             System.out.println("\nLa ejecucion finalizó, cerrando recursos......");
